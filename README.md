@@ -84,6 +84,14 @@ Os verbos aceitos pela lambda são:
 - PATCH
 - DELETE
 
+## Testes
+
+Para executar os testes basta fazer:
+
+```sh
+yarn test
+```
+
 ## Comentários
 
 Utilizei uma nomenclatura diferente do proposto no desafio. Não houve um motivo em especial, apenas quis manter em inglês.
