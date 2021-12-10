@@ -43,12 +43,6 @@ export class EmployeesService {
     const parsedData = withoutUndefinedOrNullEntries(data)
     const builder = new Builder(parsedData)
 
-    console.log({
-      parsedData,
-      updateExpr: builder.createUpdateExpression(),
-      expressionAttr: builder.createExpressionAttributeValues(),
-    })
-
     return this.documentClient
       .update({
         TableName: Table.Employees,
