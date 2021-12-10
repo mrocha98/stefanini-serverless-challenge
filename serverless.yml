@@ -1,0 +1,60 @@
+service: stefanini-serverless-challenge
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-dynamodb-local
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    packager: 'yarn'
+  dynamodb:
+    stages:
+      - dev
+      - local
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: sa-east-1
+  lambdaHashingVersion: 20201221
+
+functions:
+  employees:
+    handler: src/functions/employees.handle
+    events:
+      - http:
+          path: /employees
+          method: GET
+          cors: true
+      - http:
+          path: /employees
+          method: POST
+          cors: true
+      - http:
+          path: /employees
+          method: PATCH
+          cors: true
+      - http:
+          path: /employees
+          method: DELETE
+          cors: true
+
+resources:
+  Resources:
+    dbCertificateUsers:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        BillingMode: PAY_PER_REQUEST
+        TableName: employees
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH

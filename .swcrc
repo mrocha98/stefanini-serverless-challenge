@@ -1,0 +1,12 @@
+{
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "target": "es2020",
+    "loose": true,
+    "parser": {
+      "syntax": "typescript"
+    }
+  }
+}

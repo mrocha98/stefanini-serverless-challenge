@@ -1,0 +1,190 @@
+_type: export
+__export_format: 4
+__export_date: 2021-12-10T05:19:16.575Z
+__export_source: insomnia.desktop.app:v2020.4.1
+resources:
+  - _id: req_f0672b5bee894986be09101515636029
+    parentId: fld_bb60e3bca9ee4283b4c981f12f2ec90b
+    modified: 1639105051217
+    created: 1639104853871
+    url: "{{ BASE_URL }}/employees"
+    name: create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Fulano da Silva",
+        	"age": 32,
+        	"role": "Eletricista"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_960110f9456d4a09869d03124755da74
+    authentication: {}
+    metaSortKey: -1639105039408
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_bb60e3bca9ee4283b4c981f12f2ec90b
+    parentId: wrk_c93f73fde7d746769e68f48f36ed0c36
+    modified: 1639104745661
+    created: 1639104745661
+    name: employees
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1639104745661
+    _type: request_group
+  - _id: wrk_c93f73fde7d746769e68f48f36ed0c36
+    parentId: null
+    modified: 1636470558332
+    created: 1636470558332
+    name: My Workspace
+    description: ""
+    scope: null
+    _type: workspace
+  - _id: req_0d4df80cb658499ba4a964a4b50950ff
+    parentId: fld_bb60e3bca9ee4283b4c981f12f2ec90b
+    modified: 1639110101227
+    created: 1639104635276
+    url: "{{ BASE_URL }}/employees"
+    name: list
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: limit
+        value: "10"
+        description: ""
+        id: pair_9cd549edeb644faebf616322dfc0881b
+        disabled: false
+    headers: []
+    authentication: {}
+    metaSortKey: -1639105039358
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cf8f95afbab64de283cc4ec9a0d22ff6
+    parentId: fld_bb60e3bca9ee4283b4c981f12f2ec90b
+    modified: 1639105587540
+    created: 1639104779939
+    url: "{{ BASE_URL }}/employees"
+    name: find
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: id
+        value: 25016747-33cb-4713-8548-01b1e3782419
+        description: ""
+        id: pair_9cd549edeb644faebf616322dfc0881b
+        disabled: false
+    headers: []
+    authentication: {}
+    metaSortKey: -1639105039333
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5ae8f8c6984048d7bac5b52de980b2dc
+    parentId: fld_bb60e3bca9ee4283b4c981f12f2ec90b
+    modified: 1639110060053
+    created: 1639105039308
+    url: "{{ BASE_URL }}/employees"
+    name: update
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "589afc93-995d-4481-b51b-e3290b7b99e4",
+        	"age": 20
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_bb7424c7d5b6405b8c3ce793b365778e
+    authentication: {}
+    metaSortKey: -1639105039308
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_091e5cb957eb40f2b8e7a631b68910a3
+    parentId: fld_bb60e3bca9ee4283b4c981f12f2ec90b
+    modified: 1639109334688
+    created: 1639105266322
+    url: "{{ BASE_URL }}/employees"
+    name: delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - name: id
+        value: 455c3205-b09f-4fce-bc00-f9337835da1c
+        description: ""
+        id: pair_f77b25a766ce452aa6053a8a151e2b44
+    headers: []
+    authentication: {}
+    metaSortKey: -1639105039258
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_48d8419ace0b8aa2d0c95e7ad2eedc1b05056a7d
+    parentId: wrk_c93f73fde7d746769e68f48f36ed0c36
+    modified: 1639104708078
+    created: 1636470558474
+    name: Base Environment
+    data:
+      BASE_URL: http://localhost:3000/dev
+    dataPropertyOrder:
+      "&":
+        - BASE_URL
+    color: null
+    isPrivate: false
+    metaSortKey: 1636470558474
+    _type: environment
+  - _id: jar_48d8419ace0b8aa2d0c95e7ad2eedc1b05056a7d
+    parentId: wrk_c93f73fde7d746769e68f48f36ed0c36
+    modified: 1636470558478
+    created: 1636470558478
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_721a9253401549efab495f2a91485d9e
+    parentId: wrk_c93f73fde7d746769e68f48f36ed0c36
+    modified: 1636470558349
+    created: 1636470558349
+    fileName: My Workspace
+    contents: ""
+    contentType: yaml
+    _type: api_spec
